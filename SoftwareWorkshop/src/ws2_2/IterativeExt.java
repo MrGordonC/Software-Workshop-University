@@ -56,10 +56,9 @@ public class IterativeExt {
 
 	public static void postorderIterative(Tree curr) {
 		Stack<Tree> stack = new Stack<Tree>();
-		stack.push(curr);
 
 		while(true) { 
-			while(curr!= null) { 
+			while(!curr.getEmpty()) { 
 				stack.push(curr); 
 				stack.push(curr); 
 				curr = curr.getLeft(); 
@@ -73,11 +72,12 @@ public class IterativeExt {
 					curr = curr.getRight(); 
 				} else { 
 					System.out.print(curr.getValue() + " ");
-					curr = null; 
+					curr = new Tree();
 				} 
 		} 
 
 	}
+
 	
 	public static void main(String[] args) {
 		Tree test = new Tree(5,new Tree(1,new Tree(-5),new Tree(4,new Tree(2),new Tree())),new Tree(10,new Tree(),new Tree(41,new Tree(22), new Tree(60)))); 
