@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import ws2_1.List;
+import ws2_2.IterativeExt;
 /**
  * @author gxc378
  * Gordon Chan
